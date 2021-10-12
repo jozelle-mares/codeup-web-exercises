@@ -46,5 +46,5 @@ alert("Student is able to register for class:" + (classRoom && yourSchedule));
 
 var primeMem = ("Do you have a prime membership?");
 
-var itemAmount
+var itemAmount =
 
