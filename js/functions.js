@@ -1,4 +1,6 @@
 "use strict";
+(function(){
+
 
 /**
  * TODO:
@@ -27,8 +29,9 @@ console.log(helloMessage);
  * variable to the 'sayHello' function. You should see the same output in the
  * console.
  */
-var myName = sayHello("Jozelle")
-console.log(myName);
+var myName =" (Jozelle")
+    console.log(sayHello(myName));
+
 
 // Don't modify the following line, it generates a random number between 1 and 3
 // and stores it in a variable named random
@@ -51,9 +54,11 @@ var random = Math.floor((Math.random() * 3) + 1);
  * different result everytime you refresh the page if you are using the random
  * number)
  */
-function isTwo(number)
-    return number === 2
-    console.log(isTwo(random))
+function isTwo(number) {
+    return number === 2;
+}
+
+    console.log("The random is " + random,(isTwo(random));
     console.log(isTwo(random))
     console.log(isTwo(random))
 
@@ -68,16 +73,21 @@ function isTwo(number)
  * > calculateTip(0.25, 25.50) // returns 6.375
  * > calculateTip(0.15, 33.42) // returns 5.013
  */
-function calculateTip (){
+function calculateTip (bill, tipPercent) {
+    return (bill / 100) * tipPercent
 
 }
+console.log(calculateTip(.20,20));
+
 /**
  * TODO:
  * Use prompt and alert in combination with your calculateTip function to
  * prompt the user for the bill total and a percentage they would like to tip,
  * then display the dollar amount they should tip
  */
-
+var totalBill = parseFloat (prompt("What is the total of your bill today?"));
+var tip = parseFloat(prompt("What is the total of your bill today?"));
+alert("Your total with tip is " + totalBill + tip )
 /**
  * TODO:
  * Create a function named `applyDiscount`. This function should accept a price
@@ -92,4 +102,12 @@ function calculateTip (){
  *
  * > applyDiscount(45.99, 0.12) // 40.4712
  */
-function applyDiscount ()
+function applyDiscount (price, discountPercentage){
+    var discount = (price * discountPercentage);
+    console.log(discount)
+    return price - discount;
+}
+
+console.log(applyDiscount(45.99,0.12));
+
+})();
