@@ -53,5 +53,13 @@
 
         }
     }
+// October 20th
+
+var foods = ['pizza','chicken','burger'];
+    function one(foods){
+        return foods[1];
+    }
+console.log(one(foods));
+
 
 })();

@@ -67,7 +67,11 @@ function five(arr){
     return arr[3]
 }
 
+function three(arr){
+    return arr[2]
+}
 console.log(one(names));
 console.log(two(names));
 console.log(five(names));
+console.log(three(names))
 })();
