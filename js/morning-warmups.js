@@ -78,5 +78,18 @@ function moveToEnd(arr) {
 console.log(moveToEnd([1,2,3,4,]));
 console.log(moveToEnd(["roll","rock","and"]));
 
+// October 25th
+    var gyarados ={
+        name: 'Gyarados',
+        type: 'water', 'flying'
+        height: {
+            feet: 21,
+            inches: 4
+        }
+
+
+    }
+
+
 
 })();
