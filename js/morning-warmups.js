@@ -75,8 +75,8 @@ function moveToEnd(arr) {
    arr.push(removedElement);
    return arr;
 }
-console.log(moveToEnd([1,2,3,4,]));
-console.log(moveToEnd(["roll","rock","and"]));
+//console.log(moveToEnd([1,2,3,4,]));
+//console.log(moveToEnd(["roll","rock","and"]));
 
 // October 25th
     var gyarados ={
@@ -89,7 +89,39 @@ console.log(moveToEnd(["roll","rock","and"]));
 
 
     }
+// October 26th
+    var wrestlers = [
+        {
+            name: "Bret Hart",
+            nationality: "Canadian"
+        }, {
+            name: "Shawn Michaels",
+            nationality: "American"
+        }, {
+            name: "Christian Cage",
+            nationality: "Canadian"
+        }, {
+            name: "Keiji Mutoh",
+            nationality: "Japanese"
+        }, {
+            name: "Eddy Guerrero",
+            nationality: "American"
+        }, {
+            name: "Owen Hart",
+            nationality: "Canadian"
+        }
+    ];
 
+    function filterForCanadians(arr) {
+        var bucket = [];
+        arr.forEach(function(element){
+            if (element.nationality === "Canadian"){
+                bucket.push()
+            }
+        }
+        return bucket;
+    }
+    console.log(filterForCanadians(wrestlers));
 
 
 })();
