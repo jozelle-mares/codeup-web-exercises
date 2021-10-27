@@ -81,7 +81,7 @@ function moveToEnd(arr) {
 // October 25th
     var gyarados ={
         name: 'Gyarados',
-        type: 'water', 'flying'
+        type: 'water',
         height: {
             feet: 21,
             inches: 4
@@ -114,14 +114,23 @@ function moveToEnd(arr) {
 
     function filterForCanadians(arr) {
         var bucket = [];
-        arr.forEach(function(element){
-            if (element.nationality === "Canadian"){
+        arr.forEach(function(element) {
+            if (element.nationality === "Canadian") {
                 bucket.push()
             }
         }
         return bucket;
     }
     console.log(filterForCanadians(wrestlers));
+
+//October 27th
+var circle={
+    radius: 36
+}
+var area = Math.PI *(Math.pow) * radius
+
+
+
 
 
 })();
