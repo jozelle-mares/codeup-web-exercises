@@ -11,11 +11,14 @@
 #container h1.fancy-header {
     color: blue;
     text-decoration: underline;
+    width: 1000px;
 }
 
 /* selector for all "em" elements */
 em {
+    color: #d1b9ff;
     font-weight: bold;
+
 }
 
 /* selector for all elements with class="article" */
@@ -28,4 +31,6 @@ em {
  */
 .article>a {
     float:right;
+    width: 500px;
+    margin: 500px;
 }
