@@ -55,11 +55,13 @@
     }
 // October 20th
 
-var foods = ['pizza','chicken','burger'];
-    function one(foods){
+    var foods = ['pizza', 'chicken', 'burger'];
+
+    function one(foods) {
         return foods[1];
     }
-console.log(one(foods));
+
+    console.log(one(foods));
 
 // October 21st
 
@@ -70,16 +72,17 @@ console.log(one(foods));
 // moveToEnd([1, 2, 3, 4]) 		  // returns [2, 3, 4, 1];
 // moveToEnd(['roll', 'rock', 'and']  // returns ['rock', 'and', 'roll'];
 
-function moveToEnd(arr) {
-   var removedElement = arr.shift();
-   arr.push(removedElement);
-   return arr;
-}
+    function moveToEnd(arr) {
+        var removedElement = arr.shift();
+        arr.push(removedElement);
+        return arr;
+    }
+
 //console.log(moveToEnd([1,2,3,4,]));
 //console.log(moveToEnd(["roll","rock","and"]));
 
 // October 25th
-    var gyarados ={
+    var gyarados = {
         name: 'Gyarados',
         type: 'water',
         height: {
@@ -114,23 +117,83 @@ function moveToEnd(arr) {
 
     function filterForCanadians(arr) {
         var bucket = [];
-        arr.forEach(function(element) {
+        arr.forEach(function (element) {
             if (element.nationality === "Canadian") {
                 bucket.push()
             }
-        }
-        return bucket;
-    }
-    console.log(filterForCanadians(wrestlers));
+
+            return bucket;
+            console.log(filterForCanadians(wrestlers));
 
 //October 27th
-var circle={
-    radius: 36
-}
-var area = Math.PI *(Math.pow) * radius
+            var circle = {
+                radius: 36
+            }
+            var area = Math.PI * (Math.pow) * radius
 
 
+//November 9th
+            var bBallPlayers = [
+                {
+                    name: "Hakeem Olajuwon",
+                    height: 213
+                }, {
+                    name: "Muggsy Bogues",
+                    height: 160
+                }, {
+                    name: "Chris Paul",
+                    height: 183
+                }, {
+                    name: "Bol Bol",
+                    height: 218
+                }, {
+                    name: "Moochie Norris",
+                    height: 185
+                }, {
+                    name: "Manu Ginobili",
+                    height: 198
+                }
+            ];
+
+            function findShortest(arr) {
+                var holdThis = {height: Number.MIN_VALUE};
+                arr.forEach(function (el) {
+                    if (el.height < holdThis.height) {
+                        holdThis = el;
+                    }
+                });
+                return holdThis;
+            }
+
+            console.log(findShortest(bBallPlayers));
+
+//November 10th
+            var myCharacter = {
+                name: '',
+                hitPoints: 100,
+                class: 'Warrior',
+                abilities: {
+                    attack: function (obj) {
+                        console.log(myCharacter.name + " hit " + obj.name + " for " + myCharacter.weapon.damage + "damage!")
+                        obj.hitPoints -= myCharacter.weapon.damage;
+                        console.log(obj.name + " has " + obj.hitPoints + " hit points left!")
+                    },
+                },
+                magicPoints: 0,
+                weapon: {
+                    name: 'Silver Sabre',
+                    damage: 16,
+                    type: 'sword'
+                }
+            }
+
+            var enemy = {
+                name: 'Savage Orc',
+                hitPoints: 100,
+                class: 'Warrior',
+                magicPoints: 0,
+            }
 
 
-
-})();
+        })()
+    };
