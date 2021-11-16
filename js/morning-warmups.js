@@ -187,16 +187,83 @@
                 }
             }
 
-            var enemy = {
-                name: 'Savage Orc',
-                hitPoints: 100,
-                class: 'Warrior',
-                magicPoints: 0,
-            }
+// <<<<<<< morning-warmups
+//             var enemy = {
+//                 name: 'Savage Orc',
+//                 hitPoints: 100,
+//                 class: 'Warrior',
+//                 magicPoints: 0,
+//             }
+// =======
+// //November 2nd
+//     var groceries = [
+//         {
+//             name: "carrots",
+//             quantity: 5
+//         },{
+//             name: "yams",
+//             quantity: 50
+//         },{
+//             name: "oranges",
+//             quantity: 9
+//         },{
+//             name: "onions",
+//             quantity: 2
+//         },{
+//             name: "cucumbers",
+//             quantity: 6
+//         },{
+//             name: "potatoes",
+//             quantity: 8
+//         }
+//     ];
+//     function getHighestQuantityObject(arr) {
+//         var object = {
+//             name: "something",
+//             quantity: 0
+//         }
+//         arr.forEach(function(el){
+//             if(el.quantity > object.quantity){
+//                 object = el;
+//             }
+//         });
+//         return object;
+//     }
+// console.log(getHighestQuantityObject(groceries));
+// //November 3rd
+// function sortByName(arr) {
+//     var products = [
+//         {
+//             name: 'Playstation 5',
+//             price: 599.99
+//         }, {
+//             name: 'Logitech Wireless Mouse',
+//             price: 23.99
+//         }, {
+//             name: 'Macbook Pro',
+//             price: 1099.99
+//         }, {
+//             name: 'GoPro HERO10',
+//             price: 399.99
+//         }, {
+//             name: '12" & 6" Metal Ruler Set',
+//             price: 5.99
+//         }]
+//     products.sort(arr);
+// }
+// console.log(products);
 
 
-        })()
-        //november 12
 
-        //idk what happened but it got deleted
-    };
+
+
+
+
+//  main
+
+
+//         })()
+//         //november 12
+
+//         //idk what happened but it got deleted
+//     };
