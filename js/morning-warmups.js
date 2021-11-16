@@ -55,11 +55,13 @@
     }
 // October 20th
 
-var foods = ['pizza','chicken','burger'];
-    function one(foods){
+    var foods = ['pizza', 'chicken', 'burger'];
+
+    function one(foods) {
         return foods[1];
     }
-console.log(one(foods));
+
+    console.log(one(foods));
 
 // October 21st
 
@@ -70,16 +72,17 @@ console.log(one(foods));
 // moveToEnd([1, 2, 3, 4]) 		  // returns [2, 3, 4, 1];
 // moveToEnd(['roll', 'rock', 'and']  // returns ['rock', 'and', 'roll'];
 
-function moveToEnd(arr) {
-   var removedElement = arr.shift();
-   arr.push(removedElement);
-   return arr;
-}
+    function moveToEnd(arr) {
+        var removedElement = arr.shift();
+        arr.push(removedElement);
+        return arr;
+    }
+
 //console.log(moveToEnd([1,2,3,4,]));
 //console.log(moveToEnd(["roll","rock","and"]));
 
 // October 25th
-    var gyarados ={
+    var gyarados = {
         name: 'Gyarados',
         type: 'water',
         height: {
@@ -114,84 +117,141 @@ function moveToEnd(arr) {
 
     function filterForCanadians(arr) {
         var bucket = [];
-        arr.forEach(function(element) {
+        arr.forEach(function (element) {
             if (element.nationality === "Canadian") {
                 bucket.push()
             }
-        }
-        return bucket;
-    }
-    console.log(filterForCanadians(wrestlers));
+
+            return bucket;
+            console.log(filterForCanadians(wrestlers));
 
 //October 27th
-var circle={
-    radius: 36
-}
-var area = Math.PI *(Math.pow) * radius
-
-
-//November 2nd
-    var groceries = [
-        {
-            name: "carrots",
-            quantity: 5
-        },{
-            name: "yams",
-            quantity: 50
-        },{
-            name: "oranges",
-            quantity: 9
-        },{
-            name: "onions",
-            quantity: 2
-        },{
-            name: "cucumbers",
-            quantity: 6
-        },{
-            name: "potatoes",
-            quantity: 8
-        }
-    ];
-
-
-    function getHighestQuantityObject(arr) {
-        var object = {
-            name: "something",
-            quantity: 0
-        }
-        arr.forEach(function(el){
-            if(el.quantity > object.quantity){
-                object = el;
+            var circle = {
+                radius: 36
             }
-        });
-        return object;
-    }
-console.log(getHighestQuantityObject(groceries));
-
-//November 3rd
-function sortByName(arr) {
-    var products = [
-        {
-            name: 'Playstation 5',
-            price: 599.99
-        }, {
-            name: 'Logitech Wireless Mouse',
-            price: 23.99
-        }, {
-            name: 'Macbook Pro',
-            price: 1099.99
-        }, {
-            name: 'GoPro HERO10',
-            price: 399.99
-        }, {
-            name: '12" & 6" Metal Ruler Set',
-            price: 5.99
-        }]
-    products.sort(arr);
-}
-console.log(products);
+            var area = Math.PI * (Math.pow) * radius
 
 
+//November 9th
+            var bBallPlayers = [
+                {
+                    name: "Hakeem Olajuwon",
+                    height: 213
+                }, {
+                    name: "Muggsy Bogues",
+                    height: 160
+                }, {
+                    name: "Chris Paul",
+                    height: 183
+                }, {
+                    name: "Bol Bol",
+                    height: 218
+                }, {
+                    name: "Moochie Norris",
+                    height: 185
+                }, {
+                    name: "Manu Ginobili",
+                    height: 198
+                }
+            ];
+
+            function findShortest(arr) {
+                var holdThis = {height: Number.MIN_VALUE};
+                arr.forEach(function (el) {
+                    if (el.height < holdThis.height) {
+                        holdThis = el;
+                    }
+                });
+                return holdThis;
+            }
+
+            console.log(findShortest(bBallPlayers));
+
+//November 10th
+            var myCharacter = {
+                name: '',
+                hitPoints: 100,
+                class: 'Warrior',
+                abilities: {
+                    attack: function (obj) {
+                        console.log(myCharacter.name + " hit " + obj.name + " for " + myCharacter.weapon.damage + "damage!")
+                        obj.hitPoints -= myCharacter.weapon.damage;
+                        console.log(obj.name + " has " + obj.hitPoints + " hit points left!")
+                    },
+                },
+                magicPoints: 0,
+                weapon: {
+                    name: 'Silver Sabre',
+                    damage: 16,
+                    type: 'sword'
+                }
+            }
+
+// <<<<<<< morning-warmups
+//             var enemy = {
+//                 name: 'Savage Orc',
+//                 hitPoints: 100,
+//                 class: 'Warrior',
+//                 magicPoints: 0,
+//             }
+// =======
+// //November 2nd
+//     var groceries = [
+//         {
+//             name: "carrots",
+//             quantity: 5
+//         },{
+//             name: "yams",
+//             quantity: 50
+//         },{
+//             name: "oranges",
+//             quantity: 9
+//         },{
+//             name: "onions",
+//             quantity: 2
+//         },{
+//             name: "cucumbers",
+//             quantity: 6
+//         },{
+//             name: "potatoes",
+//             quantity: 8
+//         }
+//     ];
+//     function getHighestQuantityObject(arr) {
+//         var object = {
+//             name: "something",
+//             quantity: 0
+//         }
+//         arr.forEach(function(el){
+//             if(el.quantity > object.quantity){
+//                 object = el;
+//             }
+//         });
+//         return object;
+//     }
+// console.log(getHighestQuantityObject(groceries));
+// //November 3rd
+// function sortByName(arr) {
+//     var products = [
+//         {
+//             name: 'Playstation 5',
+//             price: 599.99
+//         }, {
+//             name: 'Logitech Wireless Mouse',
+//             price: 23.99
+//         }, {
+//             name: 'Macbook Pro',
+//             price: 1099.99
+//         }, {
+//             name: 'GoPro HERO10',
+//             price: 399.99
+//         }, {
+//             name: '12" & 6" Metal Ruler Set',
+//             price: 5.99
+//         }]
+//     products.sort(arr);
+// }
+// console.log(products);
 
 
 
@@ -199,5 +259,11 @@ console.log(products);
 
 
 
+//  main
 
-})();
+
+//         })()
+//         //november 12
+
+//         //idk what happened but it got deleted
+//     };
