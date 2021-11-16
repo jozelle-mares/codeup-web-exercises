@@ -1,0 +1,30 @@
+body{
+    background-color: peachpuff;
+    border: solid;
+    margin: 10px auto;
+    width: 50%;
+    border-radius: 20px;
+    height:fit-content;
+}
+
+.recipe-piece{
+    height:fit-content;
+    width: 30%;
+    margin: 10px auto;
+    border-radius:10px;
+    border-style: solid;
+    border-color: #d1b9ff;
+    background-color: #ffeef6;
+}
+
+.recipe-container{
+    height: fit-content;
+   /* size, style, color*/
+    width: 30%;
+    margin: 10px auto;
+    border-radius: 10px;
+    border-style: solid;
+    border-color: #ec8329;
+    background-color: antiquewhite;
+}
+
