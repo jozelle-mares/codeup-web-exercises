@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Konami Code</title>
+    <style>
+        body{
+            background-image:url("image/jk.jpeg");
+            background-size:cover;
+        }
+    </style>
+</head>
+<body>
+<h1>Konami Code</h1>
+
+<script src="/js/jquery.js"></script>
+<script>
+    "use strict";
+
+    // var keyHandler = function (event) {
+    //
+    //     // If the key isn't in the pattern, or isn't the current key in the pattern, reset
+    //     if (pattern.indexOf(event.key) < 0 || event.key !== pattern[current]) {
+    //         current = 0;
+    //         return;
+    //     }
+    //
+    //     // Update how much of the pattern is complete
+    //     current++;
+    //
+    //     // If complete, alert and reset
+    //     if (pattern.length === current) {
+    //         current = 0;
+    //         window.alert('You found it!');
+    //     }
+    //
+    // };
+//  document.addEventListener('keydown', keyHandler, false);-->
+    $(document).ready(function(){
+        let testArray = [38];
+        let cheatArray = [38,38,40,40,37,39,37,39,66,65,13]
+        let userInput = [];
+        let count = 0;
+        let successAudio = new Audio('');
+        let failAudio = new Audio('');
+
+        $(document).keyup(function(event){
+            $('.box').css('border', '7px soild white');
+
+            userInput.push(event.keyCode);
+            console.log(userInput);
+
+            if(userInput[count] === cheatArray[count]){
+                count = userInput.length;
+            } else {
+                $('.box').css('border', '7px solid red');
+                failAudio.play();
+                userInput = [];
+                count = 0;
+            }
+            (function () {
+
+            })();
+
+            if(count == 11){
+                $('.box').css('border', '7px solid yellowgreen');
+                successAudio.play();
+                alert("Congrats, you have 30 lives!");
+                userInput = [];
+                count = 0;
+            }
+        });
+
+
+
+    });
+</script>
+</body>
+</html>
