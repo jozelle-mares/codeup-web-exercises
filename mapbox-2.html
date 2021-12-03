@@ -15,12 +15,13 @@
     const map = new mapboxgl.Map({
         container: 'map', // container ID
         style: 'mapbox://styles/mapbox/streets-v11', // style URL
-        center: [-73.99207775130611, 40.73670263703375], // starting position [lng, lat]
+        // center: [-73.99207775130611, 40.73670263703375], // starting position [lng, lat]
+        // center: [-118.354044, 34.138467],
         zoom: 9 // starting zoom
     });
 
     var statueOfLiberty = new mapboxgl.Marker()
-    .setLngLat([[-74.04494945441164, 40.69077185481202]])
+    .setLngLat([[-118.354044, 34.138467]])
     .addTo(map);
 
     var popup = new mapboxgl.Popup()
