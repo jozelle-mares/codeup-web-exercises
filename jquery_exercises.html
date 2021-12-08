@@ -5,21 +5,21 @@
     <title>KPOP</title>
 </head>
 <body>
-    <h1 id="topic-of-list">KPOP GROUPS</h1>
-<p id="quote">"All i wanted to know was their names" - every fan ever</p>
-    <div id="kpopGroups">
-<ul>
-    <li class="codeup">BTS</li>
-    <li class="codeup">GOT7</li>
-    <li class="codeup">TWICE</li>
-    <li class="codeup">BTS</li>
-    <li class="codeup">The Boyz</li>
-    <li class="codeup">SHINee</li>
-    <li class="codeup">EXO</li>
-    <li class="codeup">BlackPink</li>
-    <li class="codeup">Ateez</li>
-    <li class="codeup">SF9</li>
-    <li class="codeup">MONSTA x</li>
+<h1 id="topic-of-list" class="title">KPOP GROUPS</h1>
+<p id="discription">"All I wanted to know was their names" - every fan ever</p>
+<div id="kpopGroups">
+    <ul>
+         <li class="codeup">BTS</li>
+        <li class="codeup">GOT7</li>
+        <li class="codeup">TWICE</li>
+        <li class="codeup">BTS</li>
+         <li class="codeup">The Boyz</li>
+        <li class="codeup">SHINee</li>
+         <li class="codeup">EXO</li>
+        <li class="codeup">BlackPink</li>
+        <li class="codeup">Ateez</li>
+         <li class="codeup">SF9</li>
+         <li class="codeup">MONSTA x</li>
 </ul>
 </div>
     <script src="https://code.jquery.com/jquery-2.2.4.min.js"
@@ -31,6 +31,23 @@
         // })20px
         // $('li');
         // alert
+        $('h1').click(function(){
+            $(this).css('background-color', 'purple');
+        })
+
+        $('p').dblclick(function(){
+            $(this).css('font-size', '18px');
+        })
+
+        $('li').hover(function(){
+            $(this).css('color', 'red');
+        })
+
+
+
+
     </script>
 </body>
 </html>
+
+

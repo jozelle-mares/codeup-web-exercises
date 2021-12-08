@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mapbox Lecture</title>
+
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css' rel='stylesheet' />
+
+</head>
+<body>
+<h1>Welcome to Mapbox!</h1>
+<script src="js/keys.js"></script>
+<script src="js/mapbox-geocoder-utils.js"></script>
+<div id='map' style='width: 400px; height: 300px;'></div>
+<script>
+    mapboxgl.accessToken = MAPBOX_KEY;
+    const map = new mapboxgl.Map({
+        container: 'map', // container ID
+        style: 'mapbox://styles/mapbox/streets-v11', // style URL
+        center: [-98.4683, 29.5312], // starting position [lng, lat]
+        zoom: 8 // starting zoom
+    });
+
+    //MARKERS
+    // set marker options
+    var codeup = new mapboxgl.Marker({
+        color: "blue",
+    })
+        .setLnglat([-98.48615, 29.426827]).setDraggable(true)
+        //added new marker that was initiated to the map object to render
+    codeup.addTo(map)
+    //MUST use the "on" method to recognize mapbox events. "dragend"
+    codeup.on("dragend", function(){
+        // popup.setLngLat(codeup.getLngLat());
+        console.log("stop moving");
+    })
+
+    var popup = new mapboxgl.Popup()
+    .setLngLat(codeup.getLngLat())
+    .setHTML('<h3 style="color: green">Hello from Codeup!</h3>')
+        // can link images here too
+    .addTo(map)
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>New York!</title>
+
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css' rel='stylesheet' />
+</head>
+<body>
+<div id='map' style='width: 800px; height: 600px;'></div>
+<script src="js/keys.js"></script>
+<script>
+    mapboxgl.accessToken = MAPBOX_KEY;
+    const map = new mapboxgl.Map({
+        container: 'map', // container ID
+        style: 'mapbox://styles/mapbox/streets-v11', // style URL
+        // center: [-73.99207775130611, 40.73670263703375], // starting position [lng, lat]
+        // center: [-118.354044, 34.138467],
+        zoom: 9 // starting zoom
+    });
+
+    var statueOfLiberty = new mapboxgl.Marker()
+    .setLngLat([[-118.354044, 34.138467]])
+    .addTo(map);
+
+    var popup = new mapboxgl.Popup()
+    .setHTML('<h1>Statue ofLiberty</h1>')
+    .addTo(map);
+
+    statueOfLiberty.on('dragend', function(){
+        $('#coordinates').html('Current Location: ' + statueOfLiberty.getLngLat())
+    })
+</script>
+</body>
+</html>

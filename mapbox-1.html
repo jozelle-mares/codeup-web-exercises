@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise</title>
+
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css' rel='stylesheet' />
+
+</head>
+<body>
+<h1>Welcome to San Antonio!</h1>
+
+<div id='map' style='width: 800px; height: 600px;'></div>
+
+<script src="js/keys.js"></script>
+
+<script>
+    mapboxgl.accessToken = MAPBOX_KEY;
+    const map = new mapboxgl.Map({
+        container: 'map', // container ID
+        style: 'mapbox://styles/mapbox/streets-v11', // style URL
+        center: [-98.4683, 29.5312], // starting position [lng, lat]
+        zoom: 12 // starting zoom
+    });
+
+    setTimeout(function(){
+        map.flyto({
+            center: [-97.03984256969109, 32.89923198186237]
+        })
+        map.setStyle('mapbox://styles/mapbox/satellite-streets-v11')
+    },5000)
+
+    document.
+</script>
+
+</body>
+</html>
